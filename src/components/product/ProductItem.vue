@@ -28,7 +28,11 @@ import ProductButton from './ProductButton';
 
 export default {
   name: 'product-item',
-  props: ['product'],
+  props: {
+    product: {
+      required: 'true',
+    },
+  },
   components: {
     'product-button': ProductButton,
   },

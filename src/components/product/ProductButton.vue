@@ -1,7 +1,11 @@
 <template>
   <div>
-    <button v-if="isAdding" class="button" @click="addToCart"><i class="fa fa-cart-plus"></i> Add to Cart</button>
-    <button v-else class="button button-danger" @click="removeFromCart(product._id)"><i class="fa fa-trash"></i> Remove from Cart</button>
+    <button v-if="isAdding" class="button" @click="addToCart">
+      <i class="fa fa-cart-plus"></i> Add to Cart
+    </button>
+    <button v-else class="button button-danger" @click="removeFromCart(product._id)">
+      <i class="fa fa-trash"></i> Remove from Cart
+    </button>
   </div>
 </template>
 
@@ -9,7 +13,11 @@
 import { ADD_TO_CART, REMOVE_FROM_CART } from '../../store/mutation-types';
 
 export default {
-  props: ['product'],
+  props: {
+    product: {
+      required: true,
+    },
+  },
   data() {
     return {
       cart: this.$store.state.cart,
