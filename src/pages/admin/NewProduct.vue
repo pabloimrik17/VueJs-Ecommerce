@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import ProductForm from '../../components/products/ProductForm';
+import ProductForm from '../../components/product/ProductForm';
 
 export default {
   components: { ProductForm },
@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     addProduct(model) {
-      console.log('model', model);
+      return {};
     },
   },
 };
