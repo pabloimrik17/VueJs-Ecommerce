@@ -30,5 +30,8 @@ export default {
 </script>
 
 <style scoped>
-
+  .products {
+    background: #F7F8FB;
+    padding: 30px 0;
+  }
 </style>

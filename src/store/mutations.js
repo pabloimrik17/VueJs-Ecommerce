@@ -12,7 +12,7 @@ import {
   ALL_PRODUCTS,
   ALL_PRODUCTS_SUCCESS,
   ALL_MANUFACTURERS,
-  ALL_MANUFACTURERS_SUCCESS,
+  ALL_MANUFACTURERS_SUCCESS, ERROR_MSG,
 } from './mutation-types';
 
 export const productMutations = {
@@ -66,6 +66,7 @@ export const productMutations = {
     console.debug('index', index);
     state.products.splice(index, 1);
   },
+  [ERROR_MSG]: (state, payload) => {},
 };
 
 export const cartMutations = {

@@ -12,21 +12,20 @@ export default {
   data() {
     return {
       model: {},
-      manufacturers: [
-        {
-          _id: 'sam',
-          name: 'Samsung',
-        },
-        {
-          _id: 'apple',
-          name: 'Apple',
-        },
-      ],
     };
+  },
+  created() {
+    this.$store.dispatch('allManufacturers');
+  },
+  computed: {
+    manufacturers() {
+      return this.$store.getters.allManufacturers;
+    },
   },
   methods: {
     addProduct(model) {
-      return {};
+      console.log('model', model);
+      this.$store.dispatch('addProduct', model);
     },
   },
 };
